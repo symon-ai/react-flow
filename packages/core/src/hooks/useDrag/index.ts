@@ -1,23 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
-import type { RefObject, MouseEvent } from 'react';
 import { drag } from 'd3-drag';
 import { select } from 'd3-selection';
+import { MouseEvent, RefObject, useEffect, useRef, useState } from 'react';
 
-import { useStoreApi } from '../../hooks/useStore';
-import { getDragItems, getEventHandlerParams, hasSelector, calcNextPosition } from './utils';
 import { handleNodeClick } from '../../components/Nodes/utils';
-import useGetPointerPosition from '../useGetPointerPosition';
+import { useStoreApi } from '../../hooks/useStore';
+import { Box, CoordinateExtent, Node, NodeDragItem, SelectionDragHandler, UseDragEvent, XYPosition } from '../../types';
 import { calcAutoPan, getEventPosition, rectToBox } from '../../utils';
-import type {
-  NodeDragItem,
-  Node,
-  SelectionDragHandler,
-  UseDragEvent,
-  XYPosition,
-  Box,
-  CoordinateExtent,
-} from '../../types';
 import { getRectOfNodes } from '../../utils/graph';
+import useGetPointerPosition from '../useGetPointerPosition';
+import { calcNextPosition, getDragItems, getEventHandlerParams, hasSelector } from './utils';
 
 export type UseDragData = { dx: number; dy: number };
 

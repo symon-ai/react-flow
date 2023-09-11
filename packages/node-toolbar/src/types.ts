@@ -1,5 +1,5 @@
 import { Position } from '@reactflow/core';
-import type { HTMLAttributes } from 'react';
+import { HTMLAttributes } from 'react';
 
 export type NodeToolbarProps = HTMLAttributes<HTMLDivElement> & {
   nodeId?: string | string[];

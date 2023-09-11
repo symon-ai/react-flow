@@ -1,4 +1,4 @@
-import type { XYPosition, Position, Dimensions, OnConnect, Connection } from '.';
+import { Connection, Dimensions, OnConnect, Position, XYPosition } from '.';
 
 export type HandleType = 'source' | 'target';
 

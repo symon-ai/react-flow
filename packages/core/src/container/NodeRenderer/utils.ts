@@ -1,11 +1,11 @@
-import type { ComponentType } from 'react';
+import { ComponentType } from 'react';
 
 import DefaultNode from '../../components/Nodes/DefaultNode';
+import GroupNode from '../../components/Nodes/GroupNode';
 import InputNode from '../../components/Nodes/InputNode';
 import OutputNode from '../../components/Nodes/OutputNode';
-import GroupNode from '../../components/Nodes/GroupNode';
 import wrapNode from '../../components/Nodes/wrapNode';
-import type { NodeTypes, NodeProps, NodeTypesWrapped, NodeOrigin, XYPosition } from '../../types';
+import { NodeOrigin, NodeProps, NodeTypes, NodeTypesWrapped, XYPosition } from '../../types';
 
 export type CreateNodeTypes = (nodeTypes: NodeTypes) => NodeTypesWrapped;
 

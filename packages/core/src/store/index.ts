@@ -1,26 +1,26 @@
-import { createWithEqualityFn } from 'zustand/traditional';
 import { zoomIdentity } from 'd3-zoom';
+import { createWithEqualityFn } from 'zustand/traditional';
 
-import { clampPosition, getDimensions, internalsSymbol } from '../utils';
-import { applyNodeChanges, createSelectionChange, getSelectionChanges } from '../utils/changes';
 import { getHandleBounds } from '../components/Nodes/utils';
-import { createNodeInternals, fitView, updateAbsoluteNodePositions, updateNodesAndEdgesSelections } from './utils';
-import initialState from './initialState';
-import type {
-  ReactFlowState,
-  Node,
-  Edge,
-  NodeDimensionUpdate,
+import {
   CoordinateExtent,
-  NodeDimensionChange,
+  Edge,
   EdgeSelectionChange,
-  NodeSelectionChange,
-  NodePositionChange,
-  NodeDragItem,
-  UnselectNodesAndEdgesParams,
+  Node,
   NodeChange,
+  NodeDimensionChange,
+  NodeDimensionUpdate,
+  NodeDragItem,
+  NodePositionChange,
+  NodeSelectionChange,
+  ReactFlowState,
+  UnselectNodesAndEdgesParams,
   XYPosition,
 } from '../types';
+import { clampPosition, getDimensions, internalsSymbol } from '../utils';
+import { applyNodeChanges, createSelectionChange, getSelectionChanges } from '../utils/changes';
+import initialState from './initialState';
+import { createNodeInternals, fitView, updateAbsoluteNodePositions, updateNodesAndEdgesSelections } from './utils';
 
 const createRFStore = () =>
   createWithEqualityFn<ReactFlowState>(

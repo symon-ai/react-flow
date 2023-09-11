@@ -1,5 +1,5 @@
-import type { CSSProperties, ReactNode } from 'react';
-import type { D3DragEvent, SubjectPosition } from 'd3-drag';
+import { D3DragEvent, SubjectPosition } from 'd3-drag';
+import { CSSProperties, ReactNode } from 'react';
 
 export type ResizeParams = {
   x: number;

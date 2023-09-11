@@ -1,9 +1,8 @@
-import { useEffect } from 'react';
-import type { MutableRefObject } from 'react';
+import { MutableRefObject, useEffect } from 'react';
 
+import { errorMessages } from '../contants';
 import { useStoreApi } from '../hooks/useStore';
 import { getDimensions } from '../utils';
-import { errorMessages } from '../contants';
 
 function useResizeHandler(rendererNode: MutableRefObject<HTMLDivElement | null>): void {
   const store = useStoreApi();

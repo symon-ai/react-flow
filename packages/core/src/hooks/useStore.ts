@@ -1,10 +1,10 @@
 import { useContext, useMemo } from 'react';
+import { StoreApi } from 'zustand';
 import { useStoreWithEqualityFn as useZustandStore } from 'zustand/traditional';
-import type { StoreApi } from 'zustand';
 
-import StoreContext from '../contexts/RFStoreContext';
 import { errorMessages } from '../contants';
-import type { ReactFlowState } from '../types';
+import StoreContext from '../contexts/RFStoreContext';
+import { ReactFlowState } from '../types';
 
 const zustandErrorMessage = errorMessages['error001']();
 

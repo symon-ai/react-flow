@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import { useStore } from '../../hooks/useStore';
-import type { ReactFlowState } from '../../types';
+import { ReactFlowState } from '../../types';
 
 const style: CSSProperties = { display: 'none' };
 const ariaLiveStyle: CSSProperties = {

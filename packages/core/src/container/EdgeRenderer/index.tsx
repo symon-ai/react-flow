@@ -1,16 +1,15 @@
+import cc from 'classcat';
 import { memo, ReactNode } from 'react';
 import { shallow } from 'zustand/shallow';
-import cc from 'classcat';
 
 import { useStore } from '../../hooks/useStore';
 import useVisibleEdges from '../../hooks/useVisibleEdges';
 import MarkerDefinitions from './MarkerDefinitions';
 import { getEdgePositions, getHandle, getNodeData } from './utils';
 
-import { GraphViewProps } from '../GraphView';
-import { ConnectionMode, Position } from '../../types';
-import type { Edge, EdgeTypesWrapped, ReactFlowState } from '../../types';
 import { errorMessages } from '../../contants';
+import { ConnectionMode, Edge, EdgeTypesWrapped, Position, ReactFlowState } from '../../types';
+import { GraphViewProps } from '../GraphView';
 
 type EdgeRendererProps = Pick<
   GraphViewProps,

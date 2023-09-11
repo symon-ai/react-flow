@@ -1,11 +1,11 @@
 import { useMemo, useRef } from 'react';
 import { shallow } from 'zustand/shallow';
 
-import { CreateEdgeTypes } from '../EdgeRenderer/utils';
-import { CreateNodeTypes } from '../NodeRenderer/utils';
-import type { EdgeTypes, EdgeTypesWrapped, NodeTypes, NodeTypesWrapped } from '../../types';
 import { errorMessages } from '../../contants';
 import { useStoreApi } from '../../hooks/useStore';
+import { EdgeTypes, EdgeTypesWrapped, NodeTypes, NodeTypesWrapped } from '../../types';
+import { CreateEdgeTypes } from '../EdgeRenderer/utils';
+import { CreateNodeTypes } from '../NodeRenderer/utils';
 
 export function useNodeOrEdgeTypes(nodeOrEdgeTypes: NodeTypes, createTypes: CreateNodeTypes): NodeTypesWrapped;
 export function useNodeOrEdgeTypes(nodeOrEdgeTypes: EdgeTypes, createTypes: CreateEdgeTypes): EdgeTypesWrapped;

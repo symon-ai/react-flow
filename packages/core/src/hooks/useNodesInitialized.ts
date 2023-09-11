@@ -1,6 +1,6 @@
+import { ReactFlowState } from '../types';
 import { internalsSymbol } from '../utils';
 import { useStore } from './useStore';
-import type { ReactFlowState } from '../types';
 
 export type UseNodesInitializedOptions = {
   includeHiddenNodes?: boolean;

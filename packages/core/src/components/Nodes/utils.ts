@@ -1,10 +1,9 @@
 import { MouseEvent, RefObject } from 'react';
 import { StoreApi } from 'zustand';
 
-import { getDimensions } from '../../utils';
-import { Position } from '../../types';
-import type { HandleElement, Node, NodeOrigin, ReactFlowState } from '../../types';
 import { errorMessages } from '../../contants';
+import { HandleElement, Node, NodeOrigin, Position, ReactFlowState } from '../../types';
+import { getDimensions } from '../../utils';
 
 export const getHandleBounds = (
   selector: string,
@@ -47,7 +46,7 @@ export function getMouseHandler(
     ? handler
     : (event: MouseEvent) => {
         const node = getState().nodeInternals.get(id);
-        
+
         if (node) {
           handler(event, { ...node });
         }

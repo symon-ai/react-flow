@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { ComponentType, CSSProperties, HTMLAttributes, MouseEvent } from 'react';
-import type { Node, PanelPosition, XYPosition } from '@reactflow/core';
+import { Node, PanelPosition, XYPosition } from '@reactflow/core';
+import { ComponentType, CSSProperties, HTMLAttributes, MouseEvent } from 'react';
 
 export type GetMiniMapNodeAttribute<NodeData = any> = (node: Node<NodeData>) => string;
 

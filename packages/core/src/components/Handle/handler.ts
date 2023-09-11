@@ -1,18 +1,18 @@
-import type { MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from 'react';
+import { MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from 'react';
 import { StoreApi } from 'zustand';
 
-import { getHostForElement, calcAutoPan, getEventPosition } from '../../utils';
-import type { OnConnect, HandleType, ReactFlowState, Connection } from '../../types';
+import { Connection, HandleType, OnConnect, ReactFlowState } from '../../types';
+import { calcAutoPan, getEventPosition, getHostForElement } from '../../utils';
 import { pointToRendererPoint, rendererPointToPoint } from '../../utils/graph';
 import {
   ConnectionHandle,
+  ValidConnectionFunc,
   getClosestHandle,
   getConnectionStatus,
   getHandleLookup,
   getHandleType,
   isValidHandle,
   resetRecentHandle,
-  ValidConnectionFunc,
 } from './utils';
 
 export function handlePointerDown({

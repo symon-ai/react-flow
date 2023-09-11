@@ -1,15 +1,15 @@
-import { memo, HTMLAttributes, forwardRef, MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from 'react';
 import cc from 'classcat';
+import { HTMLAttributes, MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent, forwardRef, memo } from 'react';
 import { shallow } from 'zustand/shallow';
 
-import { useStore, useStoreApi } from '../../hooks/useStore';
+import { errorMessages } from '../../contants';
 import { useNodeId } from '../../contexts/NodeIdContext';
-import { handlePointerDown } from './handler';
+import { useStore, useStoreApi } from '../../hooks/useStore';
+import { Connection, HandleProps, HandleType, Position, ReactFlowState } from '../../types';
 import { getHostForElement, isMouseEvent } from '../../utils';
 import { addEdge } from '../../utils/graph';
-import { type HandleProps, type Connection, type ReactFlowState, HandleType, Position } from '../../types';
+import { handlePointerDown } from './handler';
 import { isValidHandle } from './utils';
-import { errorMessages } from '../../contants';
 
 const alwaysValid = () => true;
 

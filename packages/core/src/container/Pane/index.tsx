@@ -2,18 +2,17 @@
  * The user selection rectangle gets displayed when a user drags the mouse while pressing shift
  */
 
-import { memo, useRef, MouseEvent as ReactMouseEvent, ReactNode } from 'react';
-import { shallow } from 'zustand/shallow';
 import cc from 'classcat';
+import { MouseEvent as ReactMouseEvent, ReactNode, memo, useRef } from 'react';
+import { shallow } from 'zustand/shallow';
 
 import UserSelection from '../../components/UserSelection';
-import { containerStyle } from '../../styles';
 import { useStore, useStoreApi } from '../../hooks/useStore';
+import { containerStyle } from '../../styles';
+import { EdgeChange, NodeChange, ReactFlowProps, ReactFlowState, SelectionMode } from '../../types';
+import { getEventPosition } from '../../utils';
 import { getSelectionChanges } from '../../utils/changes';
 import { getConnectedEdges, getNodesInside } from '../../utils/graph';
-import { getEventPosition } from '../../utils';
-import { SelectionMode } from '../../types';
-import type { ReactFlowProps, ReactFlowState, NodeChange, EdgeChange } from '../../types';
 
 type PaneProps = {
   isSelecting: boolean;

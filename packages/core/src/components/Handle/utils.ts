@@ -1,8 +1,16 @@
 import { MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from 'react';
 
-import { ConnectingHandle, ConnectionMode, ConnectionStatus } from '../../types';
+import {
+  ConnectingHandle,
+  Connection,
+  ConnectionMode,
+  ConnectionStatus,
+  HandleType,
+  Node,
+  NodeHandleBounds,
+  XYPosition,
+} from '../../types';
 import { getEventPosition, internalsSymbol } from '../../utils';
-import type { Connection, HandleType, XYPosition, Node, NodeHandleBounds } from '../../types';
 
 export type ConnectionHandle = {
   id: string | null;

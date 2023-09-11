@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { CSSProperties, MouseEvent as ReactMouseEvent } from 'react';
+import { CSSProperties, MouseEvent as ReactMouseEvent } from 'react';
 
+import { CoordinateExtent, HandleElement, Position, XYPosition } from '.';
 import { internalsSymbol } from '../utils';
-import type { XYPosition, Position, CoordinateExtent, HandleElement } from '.';
 
 // interface for the user node items
 export type Node<T = any, U extends string | undefined = string | undefined> = {

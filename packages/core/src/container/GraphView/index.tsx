@@ -1,15 +1,15 @@
 import { memo } from 'react';
 
+import ConnectionLine from '../../components/ConnectionLine';
+import useOnInitHandler from '../../hooks/useOnInitHandler';
+import { ReactFlowProps } from '../../types';
+import EdgeRenderer from '../EdgeRenderer';
+import { createEdgeTypes } from '../EdgeRenderer/utils';
 import FlowRenderer from '../FlowRenderer';
 import NodeRenderer from '../NodeRenderer';
-import EdgeRenderer from '../EdgeRenderer';
-import ViewportWrapper from '../Viewport';
-import useOnInitHandler from '../../hooks/useOnInitHandler';
-import ConnectionLine from '../../components/ConnectionLine';
-import { useNodeOrEdgeTypes } from './utils';
 import { createNodeTypes } from '../NodeRenderer/utils';
-import { createEdgeTypes } from '../EdgeRenderer/utils';
-import type { ReactFlowProps } from '../../types';
+import ViewportWrapper from '../Viewport';
+import { useNodeOrEdgeTypes } from './utils';
 
 export type GraphViewProps = Omit<ReactFlowProps, 'onSelectionChange' | 'nodes' | 'edges' | 'nodeTypes' | 'edgeTypes'> &
   Required<

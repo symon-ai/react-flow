@@ -1,9 +1,9 @@
-import type { RefObject } from 'react';
+import { RefObject } from 'react';
 
-import { clampPosition, isNumeric } from '../../utils';
-import type { CoordinateExtent, Node, NodeDragItem, NodeInternals, NodeOrigin, OnError, XYPosition } from '../../types';
-import { getNodePositionWithOrigin } from '../../utils/graph';
 import { errorMessages } from '../../contants';
+import { CoordinateExtent, Node, NodeDragItem, NodeInternals, NodeOrigin, OnError, XYPosition } from '../../types';
+import { clampPosition, isNumeric } from '../../utils';
+import { getNodePositionWithOrigin } from '../../utils/graph';
 
 export function isParentSelected(node: Node, nodeInternals: NodeInternals): boolean {
   if (!node.parentNode) {

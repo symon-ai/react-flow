@@ -1,10 +1,10 @@
-import type {
+import {
   KeyboardEvent as ReactKeyboardEvent,
   MouseEvent as ReactMouseEvent,
   TouchEvent as ReactTouchEvent,
 } from 'react';
 
-import type { Dimensions, Node, XYPosition, CoordinateExtent, Box, Rect } from '../types';
+import { Box, CoordinateExtent, Dimensions, Node, Rect, XYPosition } from '../types';
 
 export const getDimensions = (node: HTMLDivElement): Dimensions => ({
   width: node.offsetWidth,

@@ -1,7 +1,7 @@
-import { memo } from 'react';
 import cc from 'classcat';
+import { memo } from 'react';
 
-import type { MiniMapNodeProps } from './types';
+import { MiniMapNodeProps } from './types';
 
 const MiniMapNode = ({
   id,

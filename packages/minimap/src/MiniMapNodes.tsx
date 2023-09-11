@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { ReactFlowState, getNodePositionWithOrigin, useStore } from '@reactflow/core';
 import { memo } from 'react';
 import { shallow } from 'zustand/shallow';
-import { useStore, getNodePositionWithOrigin, type ReactFlowState } from '@reactflow/core';
 
 import MiniMapNode from './MiniMapNode';
-import type { MiniMapNodes, GetMiniMapNodeAttribute } from './types';
+import { GetMiniMapNodeAttribute, MiniMapNodes } from './types';
 
 declare const window: any;
 
