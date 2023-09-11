@@ -1,8 +1,7 @@
 import { memo } from 'react';
 
 import Handle from '../../components/Handle';
-import { Position } from '../../types';
-import type { NodeProps } from '../../types';
+import { NodeProps, Position } from '../../types';
 
 const DefaultNode = ({
   data,

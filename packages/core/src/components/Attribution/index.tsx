@@ -1,5 +1,5 @@
+import { PanelPosition, ProOptions } from '../../types';
 import Panel from '../Panel';
-import type { PanelPosition, ProOptions } from '../../types';
 
 type AttributionProps = {
   proOptions?: ProOptions;

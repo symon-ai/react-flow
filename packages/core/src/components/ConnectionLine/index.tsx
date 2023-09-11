@@ -1,20 +1,22 @@
+import cc from 'classcat';
 import { CSSProperties, useCallback } from 'react';
 import { shallow } from 'zustand/shallow';
-import cc from 'classcat';
 
 import { useStore } from '../../hooks/useStore';
-import { getBezierPath } from '../Edges/BezierEdge';
-import { getSmoothStepPath } from '../Edges/SmoothStepEdge';
-import { getSimpleBezierPath } from '../Edges/SimpleBezierEdge';
-import { internalsSymbol } from '../../utils';
-import type {
+import {
   ConnectionLineComponent,
+  ConnectionLineType,
+  ConnectionMode,
   ConnectionStatus,
   HandleType,
+  Position,
   ReactFlowState,
   ReactFlowStore,
 } from '../../types';
-import { Position, ConnectionLineType, ConnectionMode } from '../../types';
+import { internalsSymbol } from '../../utils';
+import { getBezierPath } from '../Edges/BezierEdge';
+import { getSimpleBezierPath } from '../Edges/SimpleBezierEdge';
+import { getSmoothStepPath } from '../Edges/SmoothStepEdge';
 
 type ConnectionLineProps = {
   nodeId: string;

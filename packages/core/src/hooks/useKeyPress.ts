@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
+import { KeyCode } from '../types';
 import { isInputDOMNode } from '../utils';
-import type { KeyCode } from '../types';
 
 type Keys = Array<string>;
 type PressedKeys = Set<string>;

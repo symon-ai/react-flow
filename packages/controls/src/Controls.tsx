@@ -1,16 +1,16 @@
-import { memo, useEffect, useState, type FC, type PropsWithChildren } from 'react';
+import { Panel, ReactFlowState, useReactFlow, useStore, useStoreApi } from '@reactflow/core';
 import cc from 'classcat';
+import { FC, PropsWithChildren, memo, useEffect, useState } from 'react';
 import { shallow } from 'zustand/shallow';
-import { useStore, useStoreApi, useReactFlow, Panel, type ReactFlowState } from '@reactflow/core';
 
-import PlusIcon from './Icons/Plus';
-import MinusIcon from './Icons/Minus';
+import ControlButton from './ControlButton';
 import FitviewIcon from './Icons/FitView';
 import LockIcon from './Icons/Lock';
+import MinusIcon from './Icons/Minus';
+import PlusIcon from './Icons/Plus';
 import UnlockIcon from './Icons/Unlock';
-import ControlButton from './ControlButton';
 
-import type { ControlProps } from './types';
+import { ControlProps } from './types';
 
 const selector = (s: ReactFlowState) => ({
   isInteractive: s.nodesDraggable || s.nodesConnectable || s.elementsSelectable,

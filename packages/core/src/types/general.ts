@@ -1,29 +1,29 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type {
-  MouseEvent as ReactMouseEvent,
-  TouchEvent as ReactTouchEvent,
+import { D3DragEvent, Selection as D3Selection, SubjectPosition, ZoomBehavior } from 'd3';
+import {
   ComponentType,
   MemoExoticComponent,
+  MouseEvent as ReactMouseEvent,
+  TouchEvent as ReactTouchEvent,
 } from 'react';
-import type { D3DragEvent, Selection as D3Selection, SubjectPosition, ZoomBehavior } from 'd3';
 
-import type { XYPosition, Rect, Transform, CoordinateExtent } from './utils';
-import type { NodeChange, EdgeChange } from './changes';
-import type {
+import { DefaultEdgeOptions } from '.';
+import { EdgeChange, NodeChange } from './changes';
+import { Edge, EdgeProps, WrapEdgeProps } from './edges';
+import { ConnectingHandle, HandleType } from './handles';
+import { ReactFlowInstance } from './instance';
+import {
   Node,
-  NodeInternals,
   NodeDimensionUpdate,
-  NodeProps,
-  WrapNodeProps,
-  NodeDragItem,
   NodeDragHandler,
-  SelectionDragHandler,
+  NodeDragItem,
+  NodeInternals,
   NodeOrigin,
+  NodeProps,
+  SelectionDragHandler,
+  WrapNodeProps,
 } from './nodes';
-import type { Edge, EdgeProps, WrapEdgeProps } from './edges';
-import type { HandleType, ConnectingHandle } from './handles';
-import type { DefaultEdgeOptions } from '.';
-import type { ReactFlowInstance } from './instance';
+import { CoordinateExtent, Rect, Transform, XYPosition } from './utils';
 
 export type NodeTypes = { [key: string]: ComponentType<NodeProps> };
 export type NodeTypesWrapped = { [key: string]: MemoExoticComponent<ComponentType<WrapNodeProps>> };

@@ -1,16 +1,14 @@
-import { memo, useMemo, useEffect, useRef } from 'react';
-import type { ComponentType } from 'react';
+import { ComponentType, memo, useEffect, useMemo, useRef } from 'react';
 import { shallow } from 'zustand/shallow';
 
-import useVisibleNodes from '../../hooks/useVisibleNodes';
+import { errorMessages } from '../../contants';
 import { useStore } from '../../hooks/useStore';
-import { clampPosition, internalsSymbol } from '../../utils';
+import useVisibleNodes from '../../hooks/useVisibleNodes';
 import { containerStyle } from '../../styles';
+import { NodeTypesWrapped, Position, ReactFlowState, WrapNodeProps } from '../../types';
+import { clampPosition, internalsSymbol } from '../../utils';
 import { GraphViewProps } from '../GraphView';
 import { getPositionWithOrigin } from './utils';
-import { Position } from '../../types';
-import type { NodeTypesWrapped, ReactFlowState, WrapNodeProps } from '../../types';
-import { errorMessages } from '../../contants';
 
 type NodeRendererProps = Pick<
   GraphViewProps,

@@ -1,8 +1,8 @@
-import type { HTMLAttributes, ReactNode } from 'react';
 import cc from 'classcat';
+import { HTMLAttributes, ReactNode } from 'react';
 
 import { useStore } from '../../hooks/useStore';
-import type { PanelPosition, ReactFlowState } from '../../types';
+import { PanelPosition, ReactFlowState } from '../../types';
 
 export type PanelProps = HTMLAttributes<HTMLDivElement> & {
   position: PanelPosition;

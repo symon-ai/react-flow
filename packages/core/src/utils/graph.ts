@@ -1,20 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { Selection as D3Selection } from 'd3';
+import { Selection as D3Selection } from 'd3';
 
-import { boxToRect, clamp, devWarn, getBoundsOfBoxes, getOverlappingArea, rectToBox } from '../utils';
+import { errorMessages } from '../contants';
 import {
-  Node,
-  Edge,
   Connection,
+  Edge,
   EdgeMarkerType,
-  Transform,
-  XYPosition,
-  Rect,
+  Node,
   NodeInternals,
   NodeOrigin,
+  Rect,
+  Transform,
   UpdateEdgeOptions,
+  XYPosition,
 } from '../types';
-import { errorMessages } from '../contants';
+import { boxToRect, clamp, devWarn, getBoundsOfBoxes, getOverlappingArea, rectToBox } from '../utils';
 
 export const isEdge = (element: Node | Connection | Edge): element is Edge =>
   'id' in element && 'source' in element && 'target' in element;

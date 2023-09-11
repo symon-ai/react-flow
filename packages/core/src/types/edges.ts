@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { CSSProperties, ComponentType, HTMLAttributes, ReactNode, MouseEvent as ReactMouseEvent } from 'react';
+import { CSSProperties, ComponentType, HTMLAttributes, MouseEvent as ReactMouseEvent, ReactNode } from 'react';
 
-import { ConnectionStatus, Position } from '.';
-import type { Connection, HandleElement, HandleType, Node } from '.';
+import { Connection, ConnectionStatus, HandleElement, HandleType, Node, Position } from '.';
 
 type EdgeLabelOptions = {
   label?: string | ReactNode;

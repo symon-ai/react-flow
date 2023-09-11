@@ -1,17 +1,23 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { memo, useEffect, useRef } from 'react';
-import type { MouseEvent } from 'react';
+import {
+  CoordinateExtent,
+  Panel,
+  ReactFlowState,
+  Rect,
+  getBoundsOfRects,
+  getRectOfNodes,
+  useStore,
+  useStoreApi,
+} from '@reactflow/core';
 import cc from 'classcat';
+import { pointer, select } from 'd3-selection';
+import { D3ZoomEvent, zoom, zoomIdentity } from 'd3-zoom';
+import { MouseEvent, memo, useEffect, useRef } from 'react';
 import { shallow } from 'zustand/shallow';
-import { zoom, zoomIdentity } from 'd3-zoom';
-import type { D3ZoomEvent } from 'd3-zoom';
-import { select, pointer } from 'd3-selection';
-import { useStore, getRectOfNodes, Panel, getBoundsOfRects, useStoreApi, CoordinateExtent } from '@reactflow/core';
-import type { ReactFlowState, Rect } from '@reactflow/core';
 
-import type { MiniMapProps } from './types';
 import MiniMapNodes from './MiniMapNodes';
+import { MiniMapProps } from './types';
 
 const defaultWidth = 200;
 const defaultHeight = 150;
@@ -55,7 +61,7 @@ function MiniMap({
   ariaLabel = 'React Flow mini map',
   inversePan = false,
   zoomStep = 10,
-  offsetScale = 5
+  offsetScale = 5,
 }: MiniMapProps) {
   const store = useStoreApi();
   const svg = useRef<SVGSVGElement>(null);

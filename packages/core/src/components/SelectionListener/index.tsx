@@ -2,7 +2,7 @@ import { memo, useEffect } from 'react';
 import { shallow } from 'zustand/shallow';
 
 import { useStore, useStoreApi } from '../../hooks/useStore';
-import type { ReactFlowState, OnSelectionChangeFunc, Node, Edge } from '../../types';
+import { Edge, Node, OnSelectionChangeFunc, ReactFlowState } from '../../types';
 
 type SelectionListenerProps = {
   onSelectionChange?: OnSelectionChangeFunc;

@@ -1,6 +1,6 @@
-import EdgeText from './EdgeText';
+import { BaseEdgeProps } from '../../types';
 import { isNumeric } from '../../utils';
-import type { BaseEdgeProps } from '../../types';
+import EdgeText from './EdgeText';
 
 const BaseEdge = ({
   id,

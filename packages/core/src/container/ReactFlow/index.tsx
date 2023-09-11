@@ -1,21 +1,31 @@
-import { forwardRef, type CSSProperties } from 'react';
 import cc from 'classcat';
+import { CSSProperties, forwardRef } from 'react';
 
+import A11yDescriptions from '../../components/A11yDescriptions';
 import Attribution from '../../components/Attribution';
-import { BezierEdge, SmoothStepEdge, StepEdge, StraightEdge, SimpleBezierEdge } from '../../components/Edges';
+import { BezierEdge, SimpleBezierEdge, SmoothStepEdge, StepEdge, StraightEdge } from '../../components/Edges';
 import DefaultNode from '../../components/Nodes/DefaultNode';
+import GroupNode from '../../components/Nodes/GroupNode';
 import InputNode from '../../components/Nodes/InputNode';
 import OutputNode from '../../components/Nodes/OutputNode';
-import GroupNode from '../../components/Nodes/GroupNode';
 import SelectionListener from '../../components/SelectionListener';
 import StoreUpdater from '../../components/StoreUpdater';
-import A11yDescriptions from '../../components/A11yDescriptions';
+import { infiniteExtent } from '../../store/initialState';
+import {
+  ConnectionLineType,
+  ConnectionMode,
+  EdgeTypes,
+  NodeOrigin,
+  NodeTypes,
+  PanOnScrollMode,
+  ReactFlowProps,
+  ReactFlowRefType,
+  SelectionMode,
+  Viewport,
+} from '../../types';
+import { isMacOs } from '../../utils';
 import GraphView from '../GraphView';
 import Wrapper from './Wrapper';
-import { infiniteExtent } from '../../store/initialState';
-import { ConnectionLineType, ConnectionMode, PanOnScrollMode, SelectionMode } from '../../types';
-import type { EdgeTypes, NodeOrigin, NodeTypes, ReactFlowProps, ReactFlowRefType, Viewport } from '../../types';
-import { isMacOs } from '../../utils';
 
 const defaultNodeTypes: NodeTypes = {
   input: InputNode,

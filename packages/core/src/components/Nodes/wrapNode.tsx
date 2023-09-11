@@ -1,15 +1,14 @@
-import { useEffect, useRef, memo } from 'react';
-import type { ComponentType, MouseEvent, KeyboardEvent } from 'react';
 import cc from 'classcat';
+import { ComponentType, KeyboardEvent, MouseEvent, memo, useEffect, useRef } from 'react';
 
-import { useStoreApi } from '../../hooks/useStore';
 import { Provider } from '../../contexts/NodeIdContext';
-import { ARIA_NODE_DESC_KEY } from '../A11yDescriptions';
 import useDrag from '../../hooks/useDrag';
+import { useStoreApi } from '../../hooks/useStore';
 import useUpdateNodePositions from '../../hooks/useUpdateNodePositions';
-import { getMouseHandler, handleNodeClick } from './utils';
+import { NodeProps, WrapNodeProps, XYPosition } from '../../types';
 import { elementSelectionKeys, isInputDOMNode } from '../../utils';
-import type { NodeProps, WrapNodeProps, XYPosition } from '../../types';
+import { ARIA_NODE_DESC_KEY } from '../A11yDescriptions';
+import { getMouseHandler, handleNodeClick } from './utils';
 
 export const arrowKeyDiffs: Record<string, XYPosition> = {
   ArrowUp: { x: 0, y: -1 },

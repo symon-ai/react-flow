@@ -1,7 +1,7 @@
-import type { FC, PropsWithChildren } from 'react';
 import cc from 'classcat';
+import { FC, PropsWithChildren } from 'react';
 
-import type { ControlButtonProps } from './types';
+import { ControlButtonProps } from './types';
 
 const ControlButton: FC<PropsWithChildren<ControlButtonProps>> = ({ children, className, ...rest }) => (
   <button type="button" className={cc(['react-flow__controls-button', className])} {...rest}>

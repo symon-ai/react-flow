@@ -1,9 +1,8 @@
 import { useMemo } from 'react';
 
-import { MarkerType } from '../../types';
-import type { EdgeMarker } from '../../types';
-import { useStoreApi } from '../../hooks/useStore';
 import { errorMessages } from '../../contants';
+import { useStoreApi } from '../../hooks/useStore';
+import { EdgeMarker, MarkerType } from '../../types';
 
 type SymbolProps = Omit<EdgeMarker, 'type'>;
 

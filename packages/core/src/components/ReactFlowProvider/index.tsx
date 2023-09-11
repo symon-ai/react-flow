@@ -1,10 +1,10 @@
-import { useRef, type FC, type PropsWithChildren } from 'react';
+import { FC, PropsWithChildren, useRef } from 'react';
 import { StoreApi } from 'zustand';
 import { UseBoundStoreWithEqualityFn } from 'zustand/traditional';
 
 import { Provider } from '../../contexts/RFStoreContext';
 import { createRFStore } from '../../store';
-import type { ReactFlowState } from '../../types';
+import { ReactFlowState } from '../../types';
 
 const ReactFlowProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
   const storeRef = useRef<UseBoundStoreWithEqualityFn<StoreApi<ReactFlowState>> | null>(null);

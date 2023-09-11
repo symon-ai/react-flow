@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 
 import { useStore } from '../hooks/useStore';
+import { ReactFlowState } from '../types';
 import { getNodesInside } from '../utils/graph';
-import type { ReactFlowState } from '../types';
 
 function useVisibleNodes(onlyRenderVisible: boolean) {
   const nodes = useStore(
